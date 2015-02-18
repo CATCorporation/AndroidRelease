@@ -1,0 +1,62 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/form_layout"
+    tools:context="com.example.emerich.mamoyenne.Traitment.AddMenu"
+    android:background="#ff2e2e2e">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/menuMatiere"
+                android:id="@+id/menuMatiere"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="150dp"
+                style="@style/btnStyleSandrift" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/menuNote"
+                android:id="@+id/menuNote"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="40dp"
+                style="@style/btnStyleSandrift" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/retour"
+                android:text="@string/retour"
+                style="@style/btnStyleSandrift"
+                android:layout_marginTop="140dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

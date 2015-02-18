@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ma Moyenne</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_add_menu">Ajouter - Supprimer</string>
+    <string name="title_activity_about">A propos</string>
+    <string name="title_activity_show">Consulter</string>
+    <string name="title_activity_delete_note">Supprimer Note</string>
+    <string name="title_activity_add_matiere">Gestion Matière</string>
+    <string name="title_activity_add_note">Gestion Notes</string>
+
+    <string name="semestre1">Semestre 1</string>
+    <string name="semestre2">Semestre 2</string>
+
+    <string name="sectionM">Section - Matières</string>
+    <string name="sectionN">Section - Notes</string>
+
+    <string name="matiere">Matière</string>
+    <string name="coef">Coef</string>
+
+    <string name="aMatiere">Ajouter Matière</string>
+    <string name="aNote">Ajouter Note</string>
+
+    <string name="update">Update</string>
+    <string name="supprimer">Supprimer</string>
+
+    <string name="retour">Retour</string>
+
+    <string name="aboutText">\nMa Moyenne\n\n\n\n\n\nApplication développée par le groupe7 de la classe 4A AL1.
+    \n\nDans le cadre du projet ANDROID. \n\n
+    \n\n\n© Copyright Groupe 7 4A AL1</string>
+
+    <string name="menuMatiere">Gestion des Matières</string>
+    <string name="menuNote">Gestion des Notes</string>
+
+
+
+
+</resources>

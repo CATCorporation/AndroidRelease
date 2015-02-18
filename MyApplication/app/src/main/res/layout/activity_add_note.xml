@@ -1,0 +1,181 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/form_layout"
+    tools:context="com.example.emerich.mamoyenne.Traitment.AddMenu"
+    android:background="#ff2e2e2e">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#ff3397ff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/sectionN"
+                android:id="@+id/section2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#ff3397ff"
+                android:layout_gravity="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#ff3397ff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/matiereSpin"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.6"
+                    android:backgroundTint="#d4595552"
+                    android:background="#d4595552"
+                    android:layout_marginRight="20dp"
+                    android:popupBackground="#d4595552" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/noteText"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1.4"
+                    android:textColor="#ffffffff"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
+                    android:background="#d4595552"
+                    android:backgroundTint="#d4595552" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiogroup">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/semestre1"
+                    android:id="@+id/sm1"
+                    android:checked="true"
+                    android:textColor="#ffbfad97" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/semestre2"
+                    android:id="@+id/sm2"
+                    android:checked="false"
+                    android:textColor="#ffbfad97" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/aNote"
+                android:id="@+id/addNote"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                style="@style/btnStyleSandrift" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/darker_gray"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noteSpin"
+                android:layout_below="@+id/addNote"
+                android:layout_alignLeft="@+id/noteText"
+                android:layout_alignStart="@+id/noteText"
+                android:layout_marginTop="20dp"
+                android:background="#d4595552"
+                android:backgroundTint="#d4595552"
+                android:popupBackground="#d4595552" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/supprimer"
+                    android:id="@+id/delNote"
+                    android:layout_below="@+id/noteSpin"
+                    style="@style/btnStyleSandrift"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="20dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update"
+                    android:id="@+id/upNote"
+                    style="@style/btnStyleSandrift"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/newNote"
+                android:layout_weight="0.20"
+                android:textColor="#ffffffff"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
+                android:background="#d4595552"
+                android:backgroundTint="#d4595552"
+                android:layout_marginTop="-30dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/retour"
+                android:id="@+id/retour"
+                android:layout_marginTop="30dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

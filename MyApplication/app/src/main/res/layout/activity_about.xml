@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.emerich.mamoyenne.Traitment.About"
+    android:background="#ff2e2e2e">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/aboutText"
+            android:id="@+id/textView"
+            android:textSize="20sp"
+            android:gravity="top|bottom|center"
+            android:scrollbars = "horizontal|vertical"
+            android:textStyle="normal|bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerInParent="true"
+            android:textColor="#ffbfad97"/>
+
+</RelativeLayout>
