@@ -100,6 +100,7 @@ public class MyBddClass extends SQLiteOpenHelper{
             }
             c.close();
         } catch (SQLiteException e) {
+            e.printStackTrace();
         }
         return liste;
     }
@@ -116,6 +117,7 @@ public class MyBddClass extends SQLiteOpenHelper{
             }
             c.close();
         } catch (SQLiteException e) {
+            e.printStackTrace();
         }
         return liste;
     }
@@ -131,6 +133,7 @@ public class MyBddClass extends SQLiteOpenHelper{
             }
             c.close();
         } catch (SQLiteException e) {
+            e.printStackTrace();
         }
         return liste;
     }
@@ -144,6 +147,7 @@ public class MyBddClass extends SQLiteOpenHelper{
             }
             c.close();
         } catch (SQLiteException e) {
+            e.printStackTrace();
         }
         return moyG;
     }
@@ -158,6 +162,7 @@ public class MyBddClass extends SQLiteOpenHelper{
             }
         c.close();
         } catch (SQLiteException e) {
+            e.printStackTrace();
         }
         return _id;
     }
@@ -173,6 +178,7 @@ public class MyBddClass extends SQLiteOpenHelper{
             }
             c.close();
         } catch (SQLiteException e) {
+            e.printStackTrace();
         }
     }
 
@@ -187,6 +193,7 @@ public class MyBddClass extends SQLiteOpenHelper{
             }
             c.close();
         } catch (SQLiteException e) {
+            e.printStackTrace();
         }
     }
 
@@ -207,6 +214,7 @@ public class MyBddClass extends SQLiteOpenHelper{
         try {
             return db.delete(TABLE_NAME_NOTE," id_mat ='"+_id+"' and note='"+note+"'",null)>0;
         } catch (SQLiteException e) {
+            e.printStackTrace();
         }
     return false;
     }

@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+    <TextView android:text="@string/bienvenue"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/button_consulter"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="40dp"
+        android:text="@string/consulter" />
+
+    <Button android:id="@+id/button_gestion_donnees"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:text="@string/gestion_donnees" />
+
+    <Button android:id="@+id/button_a_propos"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:text="@string/a_propos" />
+
+
+
+</LinearLayout>

@@ -21,7 +21,7 @@ public class addMatiere extends ActionBarActivity implements View.OnClickListene
 
     MyBddClass maBdd;
     Spinner mySpinner ;
-    ArrayList<String> maListe = new ArrayList<String>();
+    ArrayList<String> maListe = new ArrayList<>();
 
 
     @Override
@@ -55,12 +55,13 @@ public class addMatiere extends ActionBarActivity implements View.OnClickListene
                 EditText coef = (EditText) findViewById(R.id.coefText);
                 try{
                     int valeur = Integer.parseInt(coef.getText().toString());
-                    if(valeur == 0)
-                        coef.setText("1");
-                    if(!mat.getText().toString().isEmpty())
+                    if(valeur == 0) {
+                        Toast toast = Toast.makeText(getApplicationContext(), "Le coefficient ne peut pas être égal à 0", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+                    if(!mat.getText().toString().isEmpty()) {
                         maBdd.insert_matiere(mat.getText().toString(), coef.getText().toString());
-                    else
-                    {
+                    }else{
                         Toast toast = Toast.makeText(getApplicationContext(), "Vous devez inscrire le nom de la matière", Toast.LENGTH_SHORT);
                         toast.show();
                     }

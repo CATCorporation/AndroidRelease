@@ -1,0 +1,42 @@
+<resources>
+    <!-- Titres -->
+    <string name="app_name">Moyenne</string>
+    <string name="title_activity_apropos">À propos</string>
+    <string name="title_activity_consulter">Consulter</string>
+    <string name="title_activity_gestion_donnees">Gestion des données</string>
+
+    <!-- libellés -->
+    <string name="a_propos">À propos</string>
+    <string name="consulter">Consulter mes notes</string>
+    <string name="gestion_donnees">Gestion des données</string>
+    <string name="gestion_matieres">Gestion des matières</string>
+    <string name="gestion_notes">Gestion des notes</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Gestion des matières -->
+    <string name="ajout_matiere">Ajouter une matière</string>
+    <string name="ajout_coefficient">Ajouter un coefficient</string>
+
+
+    <!-- Common -->
+    <string name="ajouter">Ajouter</string>
+    <string name="modifier">Modifier</string>
+    <string name="supprimer">Supprimer</string>
+    <string name="effacer">effacer</string>
+    <string name="semestre_un">Semestre 1</string>
+    <string name="semestre_deux">Semestre 2</string>
+
+    <string name="bienvenue">Bienvenue dans l\'application Moyenne, vous permettant de calculer vos moyennes de l\'année.</string>
+    <string name="text_a_propos">
+        Cette application fut réalisée par l\'équipe 7 de l\'ESGI.\n
+        \n
+        Elle vous permettra de saisir, modifier, supprimer vos notes et vos moyennes, et les consulter.\n
+        Vous pouvez de plus le faire par semestre.\n
+        \n
+        De nouvelles améliorations verront le jour prochainement.
+    </string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_gestion_notes">Gestion des notes</string>
+    <string name="title_activity_gestion_matieres">Gestion des matières</string>
+</resources>
