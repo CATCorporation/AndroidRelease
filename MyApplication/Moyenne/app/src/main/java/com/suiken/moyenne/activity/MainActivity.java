@@ -1,5 +1,6 @@
 package com.suiken.moyenne.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import com.suiken.moyenne.R;
 import com.suiken.moyenne.dao.MatiereDAO;
 
 
-public class MainActivity extends ActionBarActivity implements View.OnClickListener{
+public class MainActivity extends Activity implements View.OnClickListener{
 
     private MatiereDAO matiereDAO;
 
@@ -44,16 +45,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 startActivity(aPropos);
                 break;
             case R.id.button_consulter:
-                Intent consulter = new Intent(this, ConsulterActivity.class);
-                startActivity(consulter);
+                if(hasNotes()) {
+                    Intent consulter = new Intent(this, ConsulterActivity.class);
+                    startActivity(consulter);
+                }else{
+                    toast = Toast.makeText(getApplicationContext(), "Vous devez saisir des notes afin de pouvoir consulter vos moyennes", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
                 break;
             case R.id.button_gestion_donnees:
                 Intent gestionDonnees = new Intent(this, GestionDonneesActivity.class);
                 startActivity(gestionDonnees);
                 break;
-            case R.id.button_a_propose:
-                Intent aPropose = new Intent(this, AProposActivity.class);
-                startActivity(aPropose);
             default:
                 toast = Toast.makeText(getApplicationContext(), "En construction", Toast.LENGTH_SHORT);
                 toast.show();
@@ -61,27 +64,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         }
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.button_a_propose) {
-            Intent aPropos = new Intent(this, AProposActivity.class);
-            startActivity(aPropos);
+    public boolean hasNotes(){
+        if(matiereDAO.getNotes().isEmpty()){
+            return false;
+        }else{
+            return true;
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }

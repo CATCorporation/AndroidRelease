@@ -43,11 +43,24 @@
             android:id="@+id/text_coefficient"
             android:hint="@string/ajout_coefficient"/>
     </LinearLayout>
-    <Button
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/effacer"
-        android:id="@+id/button_effacer_matiere"/>
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retour"
+            android:id="@+id/button_retour_matiere"
+            android:background="#9697a2e7" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ajouter"
+            android:id="@+id/button_ajouter_matiere"
+            android:background="#9697a2e7" />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,24 +69,28 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ajouter"
-            android:id="@+id/button_ajouter_matiere"/>
+            android:text="@string/effacer"
+            android:id="@+id/button_effacer_matiere"
+            android:background="#9697a2e7" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/modifier"
-            android:id="@+id/button_modifier_matiere"/>
+            android:id="@+id/button_modifier_matiere"
+            android:background="#9697a2e7" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/supprimer"
-            android:id="@+id/button_supprimer_matiere"/>
+            android:id="@+id/button_supprimer_matiere"
+            android:background="#9697a2e7" />
 
     </LinearLayout>
 
     <ListView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/listMatiere"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/listMatiere"
+        android:background="#9e6fdce1" />
 
 </LinearLayout>

@@ -22,9 +22,10 @@
     <string name="ajouter">Ajouter</string>
     <string name="modifier">Modifier</string>
     <string name="supprimer">Supprimer</string>
-    <string name="effacer">effacer</string>
+    <string name="effacer">Effacer</string>
     <string name="semestre_un">Semestre 1</string>
     <string name="semestre_deux">Semestre 2</string>
+    <string name="retour">Retour</string>
 
     <string name="bienvenue">Bienvenue dans l\'application Moyenne, vous permettant de calculer vos moyennes de l\'année.</string>
     <string name="text_a_propos">

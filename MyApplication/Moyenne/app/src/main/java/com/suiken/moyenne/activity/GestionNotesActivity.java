@@ -1,5 +1,7 @@
 package com.suiken.moyenne.activity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,7 +26,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 
-public class GestionNotesActivity extends ActionBarActivity implements View.OnClickListener{
+public class GestionNotesActivity extends Activity implements View.OnClickListener{
 
     private EditText txtNote;
     private Spinner matieresSpinner;
@@ -36,6 +38,7 @@ public class GestionNotesActivity extends ActionBarActivity implements View.OnCl
     private RadioButton radioDeuxiemeSemestre;
     private ListView listNotes;
     private RadioGroup rgSemestres;
+    private Button btnRetour;
 
     private MatiereDAO matiereDAO;
     private ArrayList<Matiere> matieres;
@@ -95,6 +98,9 @@ public class GestionNotesActivity extends ActionBarActivity implements View.OnCl
 
         rgSemestres = (RadioGroup) findViewById(R.id.semestres);
 
+        btnRetour = (Button) findViewById(R.id.button_retour_note);
+        btnRetour.setOnClickListener(this);
+
         /*ArrayList<String> array = new ArrayList<>();
         array.add("Français");
         array.add("Maths");
@@ -111,28 +117,6 @@ public class GestionNotesActivity extends ActionBarActivity implements View.OnCl
 
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_gestion_notes, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public void onClick(View v) {
@@ -181,6 +165,11 @@ public class GestionNotesActivity extends ActionBarActivity implements View.OnCl
                 break;
             case R.id.deuxiemeSemestre:
                 displayListBySemestre(2);
+                break;
+            case R.id.button_retour_note:
+                Intent gestionDonnees = new Intent(this, GestionDonneesActivity.class);
+                startActivity(gestionDonnees);
+                break;
         }
     }
 

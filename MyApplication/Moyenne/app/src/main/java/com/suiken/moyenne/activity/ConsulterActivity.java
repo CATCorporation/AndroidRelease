@@ -1,5 +1,7 @@
 package com.suiken.moyenne.activity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
@@ -8,6 +10,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
@@ -27,12 +30,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 
-public class ConsulterActivity extends ActionBarActivity implements View.OnClickListener{
+public class ConsulterActivity extends Activity implements View.OnClickListener{
 
     private RadioGroup rgSemestres;
     private RadioButton rdSemestreUn;
     private RadioButton rdSemestreDeux;
     private TableLayout tableNotes;
+    private Button btnRetour;
 
     private MatiereDAO matiereDAO;
     private ArrayList<Matiere> matieres;
@@ -45,6 +49,9 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consulter);
+
+        btnRetour = (Button) findViewById(R.id.button_retour_consulter);
+        btnRetour.setOnClickListener(this);
 
         matiereDAO = new MatiereDAO(getApplicationContext());
 
@@ -64,27 +71,6 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_consulter, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public void onClick(View v) {
@@ -98,6 +84,10 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
                 matieres = matiereDAO.getMatieresBySemestreWithNotes(2);
 
                 displayTableLayout(getMoyennes());
+                break;
+            case R.id.button_retour_consulter:
+                Intent main = new Intent(this, MainActivity.class);
+                startActivity(main);
                 break;
         }
     }
@@ -156,7 +146,7 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
                     TableLayout.LayoutParams.MATCH_PARENT);
             rowHeader.setLayoutParams(lpHeader);
 
-            rowHeader.setBackgroundColor(Color.parseColor("#AAAAAA"));
+            rowHeader.setBackgroundColor(Color.parseColor("#68A9D3"));
 
 
             for (int i = 0; i < properties.length; i++) {
@@ -189,7 +179,7 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
 
                 row.setPadding(15, 3, 15, 3);
 
-                row.setBackgroundColor(Color.parseColor("#BBBBBB"));
+                row.setBackgroundColor(Color.parseColor("#83B2D6"));
 
                 for (int i = 0; i < 3; i++) {
 

@@ -5,6 +5,9 @@
     android:paddingRight="16dp"
     android:orientation="vertical">
 
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,20 +32,14 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/matieres" />
+        android:id="@+id/matieres"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/text_note" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/effacer"
-        android:id="@+id/button_effacer_note" />
+        android:id="@+id/text_note"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -52,26 +49,50 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/retour"
+            android:id="@+id/button_retour_note"
+            android:background="#9697a2e7" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/ajouter"
-            android:id="@+id/button_ajouter_note" />
+            android:id="@+id/button_ajouter_note"
+            android:background="#9697a2e7" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/effacer"
+            android:id="@+id/button_effacer_note"
+            android:background="#9697a2e7" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/modifier"
-            android:id="@+id/button_modifier_note" />
+            android:id="@+id/button_modifier_note"
+            android:background="#9697a2e7" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/supprimer"
-            android:id="@+id/button_supprimer_note" />
+            android:id="@+id/button_supprimer_note"
+            android:background="#9697a2e7" />
 
     </LinearLayout>
 
     <ListView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/notes" />
+        android:id="@+id/notes"
+        android:background="#9e6fdce1" />
+    </LinearLayout>
 
 </LinearLayout>

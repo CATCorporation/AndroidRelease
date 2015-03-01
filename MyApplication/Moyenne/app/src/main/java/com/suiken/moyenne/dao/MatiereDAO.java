@@ -56,6 +56,7 @@ public class MatiereDAO extends DatabaseDAO{
         SQLiteDatabase datab = super.open();
 
         datab.delete(super.database.TABLE_MATIERE, "id = ?", new String[]{String.valueOf(id)});
+        datab.delete(super.database.TABLE_NOTE, "id_matiere = ?", new String[]{String.valueOf(id)});
 
         /*super.database.getWritableDatabase().execSQL(
                 "delete from " + super.database.TABLE_MATIERE + " where id = " + id + ";"
@@ -225,5 +226,18 @@ public class MatiereDAO extends DatabaseDAO{
         datab.close();
     }
 
+    public ArrayList<Note> getNotes(){
+        ArrayList<Note> result = new ArrayList<>();
 
+        SQLiteDatabase datab = super.open();
+
+        Cursor c = datab.rawQuery("select * from " + super.database.TABLE_NOTE, new String[]{});
+
+        while(c.moveToNext()){
+            result.add(new Note(c.getLong(0), c.getFloat(1)));
+        }
+
+        datab.close();
+        return result;
+    }
 }

@@ -14,17 +14,20 @@
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:layout_marginTop="40dp"
-        android:text="@string/consulter" />
+        android:text="@string/consulter"
+        android:background="#9697a2e7" />
 
     <Button android:id="@+id/button_gestion_donnees"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:text="@string/gestion_donnees" />
+        android:text="@string/gestion_donnees"
+        android:background="#9697a2e7" />
 
     <Button android:id="@+id/button_a_propos"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
-        android:text="@string/a_propos" />
+        android:text="@string/a_propos"
+        android:background="#9697a2e7" />
 
 
 
