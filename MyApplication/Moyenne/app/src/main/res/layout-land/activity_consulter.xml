@@ -6,16 +6,25 @@
     android:orientation="vertical"
     android:background="#ff2e2e2e">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="20dp">
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -32,23 +41,10 @@
                 android:layout_gravity="left"
                 android:textColor="#ffbfad97"/>
         </RadioGroup>
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical"
-            android:layout_marginTop="90dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:orientation="horizontal">
 
                 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -65,7 +61,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/retour"
                 android:id="@+id/button_retour_consulter"
-                android:background="#9697a2e7"
                 android:layout_marginTop="20dp"
                 style="@style/btnStyle"/>
 
