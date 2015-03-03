@@ -107,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listMatiere"
-        android:background="#ffbfad97"
+        android:background="#ffb6babb"
         android:layout_marginTop="20dp" />
 
 </LinearLayout>

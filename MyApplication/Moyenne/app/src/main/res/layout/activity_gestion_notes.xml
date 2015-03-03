@@ -116,13 +116,11 @@
 
             <ListView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/notes"
                 android:layout_marginTop="10dp"
-                android:layout_gravity="bottom"
-                android:smoothScrollbar="true"
                 android:layout_weight="0.2"
-                android:background="#ffbfad97" />
+                android:background="#ffb6babb" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
