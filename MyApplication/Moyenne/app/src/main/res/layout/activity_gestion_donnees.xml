@@ -3,26 +3,29 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ff2e2e2e">
 
     <Button android:id="@+id/button_gestion_notes"
         android:text="@string/gestion_notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="#9697a2e7" />
+        style="@style/btnStyle" />
 
     <Button android:id="@+id/button_gestion_matieres"
         android:text="@string/gestion_matieres"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:background="#9697a2e7" />
+        style="@style/btnStyle"
+        android:layout_marginTop="20dp" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/retour"
         android:id="@+id/button_retour_gestion_donnees"
-        android:background="#9697a2e7" />
+        style="@style/btnStyle"
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>

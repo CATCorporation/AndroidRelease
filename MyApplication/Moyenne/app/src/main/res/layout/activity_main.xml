@@ -3,31 +3,36 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ff2e2e2e">
 
     <TextView android:text="@string/bienvenue"
         android:layout_width="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#ffbfad97"
+        android:textSize="18sp" />
 
     <Button android:id="@+id/button_consulter"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:layout_marginTop="40dp"
         android:text="@string/consulter"
-        android:background="#9697a2e7" />
+        style="@style/btnStyle"/>
 
     <Button android:id="@+id/button_gestion_donnees"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:text="@string/gestion_donnees"
-        android:background="#9697a2e7" />
+        android:layout_marginTop="20dp"
+        style="@style/btnStyle"/>
 
     <Button android:id="@+id/button_a_propos"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:text="@string/a_propos"
-        android:background="#9697a2e7" />
+        android:layout_marginTop="20dp"
+        style="@style/btnStyle"/>
 
 
 

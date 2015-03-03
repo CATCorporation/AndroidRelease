@@ -29,12 +29,12 @@
 
     <string name="bienvenue">Bienvenue dans l\'application Moyenne, vous permettant de calculer vos moyennes de l\'année.</string>
     <string name="text_a_propos">
-        Cette application fut réalisée par l\'équipe 7 de l\'ESGI.\n
+        \n\nCette application fut réalisée par l\'équipe 7 de l\'ESGI.\n
         \n
         Elle vous permettra de saisir, modifier, supprimer vos notes et vos moyennes, et les consulter.\n
         Vous pouvez de plus le faire par semestre.\n
         \n
-        De nouvelles améliorations verront le jour prochainement.
+        De nouvelles améliorations verront le jour prochainement.\n\n
     </string>
 
     <string name="hello_world">Hello world!</string>

@@ -3,24 +3,27 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ff2e2e2e">
 
         <TextView android:text="@string/app_name"
             android:textSize="@dimen/abc_action_bar_default_height_material"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#ffbfad97"/>
 
         <TextView android:text="@string/text_a_propos"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:textColor="#ffbfad97"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/retour"
             android:id="@+id/button_retour_a_propos"
-            android:background="#9697a2e7"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            style="@style/btnStyle"/>
 
 </LinearLayout>

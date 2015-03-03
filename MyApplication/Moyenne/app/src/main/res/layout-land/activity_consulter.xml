@@ -3,7 +3,8 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ff2e2e2e">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,14 +21,16 @@
                 android:layout_height="wrap_content"
                 android:text="@string/semestre_un"
                 android:id="@+id/premierSemestre"
-                android:checked="true" />
+                android:checked="true"
+                android:textColor="#ffbfad97"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/semestre_deux"
                 android:id="@+id/deuxiemeSemestre"
-                android:layout_gravity="left" />
+                android:layout_gravity="left"
+                android:textColor="#ffbfad97"/>
         </RadioGroup>
     </LinearLayout>
 
@@ -63,7 +66,8 @@
                 android:text="@string/retour"
                 android:id="@+id/button_retour_consulter"
                 android:background="#9697a2e7"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="20dp"
+                style="@style/btnStyle"/>
 
         </LinearLayout>
 
