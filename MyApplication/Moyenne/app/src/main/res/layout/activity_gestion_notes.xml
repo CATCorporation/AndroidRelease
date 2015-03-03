@@ -119,7 +119,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/notes"
                 android:layout_marginTop="10dp"
-                android:layout_weight="0.2"
                 android:background="#ffb6babb" />
             </LinearLayout>
         </LinearLayout>
