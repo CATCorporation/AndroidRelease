@@ -58,7 +58,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
-    
     @Override
     public void onClick(View v){
         Toast toast;
