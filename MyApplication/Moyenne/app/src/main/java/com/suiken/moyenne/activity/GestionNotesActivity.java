@@ -1,6 +1,5 @@
 package com.suiken.moyenne.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -26,7 +25,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 
-public class GestionNotesActivity extends Activity implements View.OnClickListener{
+public class GestionNotesActivity extends ActionBarActivity implements View.OnClickListener{
 
     private EditText txtNote;
     private Spinner matieresSpinner;
@@ -64,7 +63,6 @@ public class GestionNotesActivity extends Activity implements View.OnClickListen
         selectedCell = matieres.get(0);
 
         txtNote = (EditText) findViewById(R.id.text_note);
-        //txtNote.setText(String.valueOf(selectedCell.getNote()));
 
         btnAjouter = (Button) findViewById(R.id.button_ajouter_note);
         btnAjouter.setOnClickListener(this);
@@ -100,23 +98,29 @@ public class GestionNotesActivity extends Activity implements View.OnClickListen
 
         btnRetour = (Button) findViewById(R.id.button_retour_note);
         btnRetour.setOnClickListener(this);
-
-        /*ArrayList<String> array = new ArrayList<>();
-        array.add("Français");
-        array.add("Maths");
-        array.add("EPS");
-        array.add("Anglais");
-        array.add("Allemand");
-        array.add("Chinois");
-        array.add("Chimie");
-        array.add("Physiques");
-        array.add("SVT");
-
-        ArrayAdapter<String> arrayAdapteur = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, array);
-        s.setAdapter(arrayAdapteur);*/
-
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public void onClick(View v) {

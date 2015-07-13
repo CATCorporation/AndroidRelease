@@ -1,10 +1,8 @@
 package com.suiken.moyenne.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,7 +23,7 @@ import java.io.Console;
 import java.util.ArrayList;
 
 
-public class GestionMatieresActivity extends Activity implements View.OnClickListener{
+public class GestionMatieresActivity extends ActionBarActivity implements View.OnClickListener{
 
 //    Composants de la vue
     private Button btnAjouter;
@@ -54,16 +52,6 @@ public class GestionMatieresActivity extends Activity implements View.OnClickLis
 
         lv = (ListView) findViewById(R.id.listMatiere);
         array = matiereDAO.getMatieresBySemestre(1);
-
-        /*array.add("Français");
-        array.add("Maths");
-        array.add("EPS");
-        array.add("Anglais");
-        array.add("Allemand");
-        array.add("Chinois");
-        array.add("Chimie");
-        array.add("Physiques");
-        array.add("SVT");*/
 
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, array);
         lv.setAdapter(arrayAdapter);
@@ -99,6 +87,28 @@ public class GestionMatieresActivity extends Activity implements View.OnClickLis
 
         btnRetour = (Button) findViewById(R.id.button_retour_matiere);
         btnRetour.setOnClickListener(this);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
