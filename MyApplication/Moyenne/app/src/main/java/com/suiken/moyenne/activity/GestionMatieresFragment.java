@@ -1,6 +1,7 @@
 package com.suiken.moyenne.activity;
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -76,7 +77,13 @@ public class GestionMatieresFragment extends Fragment implements View.OnClickLis
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view =  inflater.inflate(R.layout.fragment_gestion_matieres, container, false);
+        View view =  null;
+        if(getResources().getConfiguration().screenLayout == Configuration.SCREENLAYOUT_SIZE_XLARGE
+           && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE )
+            view = inflater.inflate(R.layout.matiere_xlarge, container, false);
+        else
+            view = inflater.inflate(R.layout.fragment_gestion_matieres, container, false);
+
         matiereDAO = new MatiereDAO(getActivity().getBaseContext());
 
         lv = (ListView) view.findViewById(R.id.listMatiere);
