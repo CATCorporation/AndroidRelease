@@ -1,6 +1,7 @@
 package com.suiken.moyenne.activity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
@@ -23,9 +24,8 @@ import com.suiken.moyenne.model.Note;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.Map;
 
 
@@ -35,7 +35,6 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
     private RadioButton rdSemestreUn;
     private RadioButton rdSemestreDeux;
     private TableLayout tableNotes;
-    private Button btnRetour;
 
     private MatiereDAO matiereDAO;
     private ArrayList<Matiere> matieres;
@@ -49,8 +48,7 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consulter);
 
-        btnRetour = (Button) findViewById(R.id.button_retour_consulter);
-        btnRetour.setOnClickListener(this);
+        getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_consulter));
 
         matiereDAO = new MatiereDAO(getApplicationContext());
 
@@ -71,22 +69,39 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
     }
 
     @Override
+    protected void onRestart() {
+        super.onRestart();
+        Configuration config = getResources().getConfiguration();
+        getResources().updateConfiguration(config, null);
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        Configuration config = new Configuration();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_fr) {
+            config.locale = Locale.FRENCH;
+            getResources().updateConfiguration(config, null);
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+        if (id == R.id.action_en) {
+            config.locale = Locale.ENGLISH;
+            getResources().updateConfiguration(config, null);
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -104,10 +119,6 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
                 matieres = matiereDAO.getMatieresBySemestreWithNotes(2);
 
                 displayTableLayout(getMoyennes());
-                break;
-            case R.id.button_retour_consulter:
-                Intent main = new Intent(this, MainActivity.class);
-                startActivity(main);
                 break;
         }
     }

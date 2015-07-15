@@ -1,10 +1,7 @@
 package com.suiken.moyenne.activity;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.net.Uri;
+import android.content.res.Configuration;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,25 +15,33 @@ import com.suiken.moyenne.dao.MatiereDAO;
 import com.suiken.moyenne.model.Matiere;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class GestionDonneesActivity extends ActionBarActivity implements View.OnClickListener{
-
-    private Button btnRetour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_donnees);
 
-        btnRetour = (Button) findViewById(R.id.button_retour_gestion_donnees);
-        btnRetour.setOnClickListener(this);
+        getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_gestion_donnees));
 
         Button gestionMatieres = (Button) findViewById(R.id.button_gestion_matieres);
         gestionMatieres.setOnClickListener(this);
 
         Button gestionNotes = (Button) findViewById(R.id.button_gestion_notes);
         gestionNotes.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Configuration config = getResources().getConfiguration();
+        getResources().updateConfiguration(config, null);
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
     @Override
@@ -48,9 +53,21 @@ public class GestionDonneesActivity extends ActionBarActivity implements View.On
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        Configuration config = new Configuration();
 
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_fr) {
+            config.locale = Locale.FRENCH;
+            getResources().updateConfiguration(config, null);
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+        if (id == R.id.action_en) {
+            config.locale = Locale.ENGLISH;
+            getResources().updateConfiguration(config, null);
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -75,10 +92,6 @@ public class GestionDonneesActivity extends ActionBarActivity implements View.On
                     toast = Toast.makeText(getApplicationContext(), "Vous devez saisir des matières avant de pouvoir saisir des notes", Toast.LENGTH_SHORT);
                     toast.show();
                 }
-                break;
-            case R.id.button_retour_gestion_donnees:
-                Intent main = new Intent(this, MainActivity.class);
-                startActivity(main);
                 break;
         }
     }

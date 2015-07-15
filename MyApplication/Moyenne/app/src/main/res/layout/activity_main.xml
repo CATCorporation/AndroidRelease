@@ -34,6 +34,4 @@
         android:layout_marginTop="20dp"
         style="@style/btnStyle"/>
 
-
-
 </LinearLayout>

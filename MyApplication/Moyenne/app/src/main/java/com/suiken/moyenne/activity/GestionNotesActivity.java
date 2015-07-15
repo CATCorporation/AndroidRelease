@@ -4,31 +4,16 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.suiken.moyenne.R;
-import com.suiken.moyenne.dao.MatiereDAO;
-import com.suiken.moyenne.model.Matiere;
-import com.suiken.moyenne.model.Note;
 
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-
-
+import java.util.Locale;
 
 public class GestionNotesActivity extends ActionBarActivity implements GestionNoteFragment.OnFragmentInteractionListener{
 
@@ -38,31 +23,50 @@ public class GestionNotesActivity extends ActionBarActivity implements GestionNo
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_notes);
 
+        getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_gestion_notes));
+
         FragmentManager fragmentManager = this.getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Fragment fragment = new GestionNoteFragment();
-        fragmentTransaction.add(R.id.Notes, fragment);
+        fragmentTransaction.add(R.id.Notes, fragment,"FragmentNotes");
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 
     @Override
+    protected void onRestart() {
+        super.onRestart();
+        Configuration config = getResources().getConfiguration();
+        getResources().updateConfiguration(config, null);
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        Configuration config = new Configuration();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_fr) {
+            config.locale = Locale.FRENCH;
+            getResources().updateConfiguration(config, null);
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+        if (id == R.id.action_en) {
+            config.locale = Locale.ENGLISH;
+            getResources().updateConfiguration(config, null);
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

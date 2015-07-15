@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/FragmentMatiere"
-    android:name="com.suiken.moyenne.GestionMatieresFragment"
     tools:context="com.suiken.moyenne.activity.GestionMatieresFragment">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -72,13 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/retour"
-                android:id="@+id/button_retour_matiere"
-                style="@style/btnStyle"
-                android:layout_marginTop="20dp" />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

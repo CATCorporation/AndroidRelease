@@ -1,12 +1,14 @@
 package com.suiken.moyenne.activity;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -23,6 +25,7 @@ import com.suiken.moyenne.dao.MatiereDAO;
 import com.suiken.moyenne.model.Matiere;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class GestionMatieresFragment extends Fragment implements View.OnClickListener{
@@ -30,7 +33,6 @@ public class GestionMatieresFragment extends Fragment implements View.OnClickLis
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -44,7 +46,6 @@ public class GestionMatieresFragment extends Fragment implements View.OnClickLis
     private EditText txtMatiere;
     private EditText txtCoeff;
     private RadioGroup radioGroup;
-    private Button btnRetour;
 
     private MatiereDAO matiereDAO;
     private ArrayAdapter<Matiere> arrayAdapter;
@@ -125,11 +126,42 @@ public class GestionMatieresFragment extends Fragment implements View.OnClickLis
         txtCoeff = (EditText) view.findViewById(R.id.text_coefficient);
         txtCoeff.setText("");
 
-        btnRetour = (Button) view.findViewById(R.id.button_retour_matiere);
-        btnRetour.setOnClickListener(this);
 
 
         return view;
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getActivity().getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        Configuration config = new Configuration();
+
+        if (id == R.id.action_fr) {
+            config.locale = Locale.FRENCH;
+            getResources().updateConfiguration(config, null);
+            Fragment currentFragment = getFragmentManager().findFragmentByTag("FragmentMatiere");
+            FragmentTransaction fragTransaction = getFragmentManager().beginTransaction();
+            fragTransaction.detach(currentFragment);
+            fragTransaction.attach(currentFragment);
+            fragTransaction.commit();
+            return true;
+        }
+        if (id == R.id.action_en) {
+            config.locale = Locale.ENGLISH;
+            getResources().updateConfiguration(config, null);
+            Fragment currentFragment = getFragmentManager().findFragmentByTag("FragmentMatiere");
+            FragmentTransaction fragTransaction = getFragmentManager().beginTransaction();
+            fragTransaction.detach(currentFragment);
+            fragTransaction.attach(currentFragment);
+            fragTransaction.commit();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -201,10 +233,6 @@ public class GestionMatieresFragment extends Fragment implements View.OnClickLis
                 break;
             case R.id.deuxiemeSemestre:
                 displayListBySemestre(2);
-                break;
-            case R.id.button_retour_matiere:
-                //Intent gestionDonnees = new Intent(this, GestionDonneesActivity.class);
-                //startActivity(gestionDonnees);
                 break;
         }
     }

@@ -1,0 +1,45 @@
+<resources>
+    <!-- Titres -->
+    <string name="app_name">Average</string>
+    <string name="title_activity_apropos">About</string>
+    <string name="title_activity_consulter">Consult</string>
+    <string name="title_activity_gestion_donnees">Data management</string>
+
+    <!-- libellés -->
+    <string name="a_propos">About</string>
+    <string name="consulter">Consult my notes</string>
+    <string name="gestion_donnees">Data management</string>
+    <string name="gestion_matieres">Class management</string>
+    <string name="gestion_notes">Notes management</string>
+    <string name="action_fr">French</string>
+    <string name="action_en">English</string>
+
+    <!-- Gestion des matières -->
+    <string name="ajout_matiere">Add a Class </string>
+    <string name="ajout_coefficient">Add a coefficient</string>
+
+
+    <!-- Common -->
+    <string name="ajouter">Add</string>
+    <string name="modifier">Edit</string>
+    <string name="supprimer">Remove</string>
+    <string name="effacer">Delete</string>
+    <string name="semestre_un">Semester 1</string>
+    <string name="semestre_deux">Semester 2</string>
+    <string name="retour">Return</string>
+
+    <string name="bienvenue">Welcome to the average application, allowing you to calculate your average year.</string>
+    <string name="text_a_propos">
+        \n\nThis application was made by team 7 of the MMSE. \n
+        \n
+         It will allow you to capture, edit, delete your notes and averages, and view them. \n
+         You can do more per semester. \n
+         \n
+         Further improvements will emerge soon. \n\n
+    </string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_gestion_notes">Notes management</string>
+    <string name="title_activity_gestion_matieres">Class management</string>
+
+</resources>
