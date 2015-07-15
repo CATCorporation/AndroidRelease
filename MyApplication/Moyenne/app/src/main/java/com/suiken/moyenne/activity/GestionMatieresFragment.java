@@ -5,6 +5,7 @@ import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,9 +79,12 @@ public class GestionMatieresFragment extends Fragment implements View.OnClickLis
         // Inflate the layout for this fragment
 
         View view =  null;
-        if(getResources().getConfiguration().screenLayout == Configuration.SCREENLAYOUT_SIZE_XLARGE
-           && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE )
+        if((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) == Configuration.SCREENLAYOUT_SIZE_XLARGE
+           && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE ) {
             view = inflater.inflate(R.layout.matiere_xlarge, container, false);
+
+        }
+
         else
             view = inflater.inflate(R.layout.fragment_gestion_matieres, container, false);
 
