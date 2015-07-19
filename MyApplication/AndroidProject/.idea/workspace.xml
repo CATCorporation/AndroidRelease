@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5250920c-a278-42fe-9315-7201d475f569" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/app/src/main/java/com/suiken/moyenne/activity/ConsulterActivity.java" afterPath="$PROJECT_DIR$/../Moyenne/app/src/main/java/com/suiken/moyenne/activity/ConsulterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/app/src/main/java/com/suiken/moyenne/activity/GestionDonneesActivity.java" afterPath="$PROJECT_DIR$/../Moyenne/app/src/main/java/com/suiken/moyenne/activity/GestionDonneesActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/app/src/main/java/com/suiken/moyenne/activity/GestionMatieresFragment.java" afterPath="$PROJECT_DIR$/../Moyenne/app/src/main/java/com/suiken/moyenne/activity/GestionMatieresFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/app/src/main/java/com/suiken/moyenne/activity/GestionNoteFragment.java" afterPath="$PROJECT_DIR$/../Moyenne/app/src/main/java/com/suiken/moyenne/activity/GestionNoteFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/app/src/main/java/com/suiken/moyenne/activity/MainActivity.java" afterPath="$PROJECT_DIR$/../Moyenne/app/src/main/java/com/suiken/moyenne/activity/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/app/app.iml" afterPath="$PROJECT_DIR$/../Moyenne/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../Moyenne/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Moyenne/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../Moyenne/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/app/src/main/res/values-en/strings" afterPath="$PROJECT_DIR$/../Moyenne/app/src/main/res/values-en/strings" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Moyenne/app/src/main/res/values-fr/strings" afterPath="$PROJECT_DIR$/../Moyenne/app/src/main/res/values-fr/strings" />
     </list>
     <ignored path="AndroidProject.iws" />

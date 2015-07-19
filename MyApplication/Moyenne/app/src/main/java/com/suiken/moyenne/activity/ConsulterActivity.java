@@ -40,7 +40,7 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
     private ArrayList<Matiere> matieres;
     private ArrayList<Note> notes;
 
-    private String properties[] = {getResources().getString(R.string.matiere), getResources().getString(R.string.coefficient), getResources().getString(R.string.moyenne)};
+    private String properties[] = {"Matière", "Coefficient", "Moyenne"};
 
 
     @Override

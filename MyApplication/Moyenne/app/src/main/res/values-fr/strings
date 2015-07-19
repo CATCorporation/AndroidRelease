@@ -36,7 +36,7 @@
     <string name="erreur_note">Vous devez saisir une note entre 0 et 20</string>
 
     <!-- Gestion des données -->
-    <string name="erreur_saisie_note_avant_matiere">You have to enter a subject before enter a grade</string>
+    <string name="erreur_saisie_note_avant_matiere">Vous devez saisir une note avant de pouvoir saisir une matière</string>
 
     <!-- Common -->
     <string name="ajouter">Ajouter</string>
