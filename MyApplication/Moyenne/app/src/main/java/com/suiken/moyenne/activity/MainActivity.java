@@ -93,7 +93,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     Intent consulter = new Intent(this, ConsulterActivity.class);
                     startActivity(consulter);
                 }else{
-                    toast = Toast.makeText(getApplicationContext(), "Vous devez saisir des notes afin de pouvoir consulter vos moyennes", Toast.LENGTH_SHORT);
+                    toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.erreur_saisir_note_avant_moyenne), Toast.LENGTH_SHORT);
                     toast.show();
                 }
                 break;
@@ -102,7 +102,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 startActivity(gestionDonnees);
                 break;
             default:
-                toast = Toast.makeText(getApplicationContext(), "En construction", Toast.LENGTH_SHORT);
+                toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.construction), Toast.LENGTH_SHORT);
                 toast.show();
                 break;
         }

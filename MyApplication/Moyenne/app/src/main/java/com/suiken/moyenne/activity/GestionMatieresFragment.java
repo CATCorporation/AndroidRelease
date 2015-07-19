@@ -297,15 +297,15 @@ public class GestionMatieresFragment extends Fragment implements View.OnClickLis
     public boolean verifSaisie() {
         Toast toast;
         if (txtMatiere.getText().toString().equals("")) {
-            toast = Toast.makeText(getActivity().getApplicationContext(), "Vous devez saisir une matiere", Toast.LENGTH_SHORT);
+            toast = Toast.makeText(getActivity().getApplicationContext(), getResources().getString(R.string.erreur_saisie_matiere), Toast.LENGTH_SHORT);
             toast.show();
             return false;
         } else if (txtCoeff.getText().toString().equals("")) {
-            toast = Toast.makeText(getActivity().getApplicationContext(), "Vous devez saisir un coefficient", Toast.LENGTH_SHORT);
+            toast = Toast.makeText(getActivity().getApplicationContext(), getResources().getString(R.string.erreur_saisie_coefficient), Toast.LENGTH_SHORT);
             toast.show();
             return false;
         }else if(Integer.parseInt(txtCoeff.getText().toString()) == 0){
-            toast = Toast.makeText(getActivity().getApplicationContext(), "Le coefficient doit être supérieur à 0", Toast.LENGTH_SHORT);
+            toast = Toast.makeText(getActivity().getApplicationContext(), getResources().getString(R.string.erreur_coefficient), Toast.LENGTH_SHORT);
             toast.show();
             return false;
         }

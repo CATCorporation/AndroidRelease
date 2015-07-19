@@ -2,22 +2,41 @@
     <!-- Titres -->
     <string name="app_name">Average</string>
     <string name="title_activity_apropos">About</string>
-    <string name="title_activity_consulter">Consult</string>
+    <string name="title_activity_consulter">View</string>
     <string name="title_activity_gestion_donnees">Data management</string>
 
     <!-- libellés -->
     <string name="a_propos">About</string>
-    <string name="consulter">Consult my notes</string>
+    <string name="consulter">View my grades</string>
     <string name="gestion_donnees">Data management</string>
-    <string name="gestion_matieres">Class management</string>
-    <string name="gestion_notes">Notes management</string>
+    <string name="gestion_matieres">Subject management</string>
+    <string name="gestion_notes">Grades management</string>
+    <string name="action_settings">Settings</string>
     <string name="action_fr">French</string>
     <string name="action_en">English</string>
+    <string name="erreur_saisir_note_avant_moyenne">You have to enter a grade before viewing your average grades</string>
+    <string name="construction">Coming soon</string>
+
+
+    <!-- Consulter les matières -->
+    <string name="matiere">Subject</string>
+    <string name="coefficient">Coefficient</string>
+    <string name="moyenne">Average</string>
+    <string name="moyenne_generale">Average grades</string>
 
     <!-- Gestion des matières -->
-    <string name="ajout_matiere">Add a Class </string>
+    <string name="ajout_matiere">Add a Subject</string>
     <string name="ajout_coefficient">Add a coefficient</string>
+    <string name="erreur_saisie_matiere">You have to enter a subject</string>
+    <string name="erreur_saisie_coefficient">You have to enter a coefficient</string>
+    <string name="erreur_coefficient">The coefficient must be higher than 0</string>
 
+    <!-- Gestion des notes -->
+    <string name="erreur_saisie_note">You have to enter a grade</string>
+    <string name="erreur_note">The grade must be a number between 0 and 20</string>
+
+    <!-- Gestion des données -->
+    <string name="erreur_saisie_note_avant_matiere">You have to enter a subject before entering a grade</string>
 
     <!-- Common -->
     <string name="ajouter">Add</string>
@@ -28,18 +47,18 @@
     <string name="semestre_deux">Semester 2</string>
     <string name="retour">Return</string>
 
-    <string name="bienvenue">Welcome to the average application, allowing you to calculate your average year.</string>
+    <string name="bienvenue">Welcome to the Average application, allowing you to calculate your average grades for a year.</string>
     <string name="text_a_propos">
-        \n\nThis application was made by team 7 of the MMSE. \n
+        \n\nThis application was made by team 7 of the ESGI. \n
         \n
-         It will allow you to capture, edit, delete your notes and averages, and view them. \n
+         It will allow you to enter, edit and delete your grades and averages, and view them. \n
          You can do more per semester. \n
          \n
          Further improvements will emerge soon. \n\n
     </string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_gestion_notes">Notes management</string>
-    <string name="title_activity_gestion_matieres">Class management</string>
+    <string name="title_activity_gestion_notes">Grades management</string>
+    <string name="title_activity_gestion_matieres">Subject management</string>
 
 </resources>

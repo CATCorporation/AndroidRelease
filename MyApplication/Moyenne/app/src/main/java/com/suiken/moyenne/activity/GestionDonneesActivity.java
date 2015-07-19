@@ -89,7 +89,7 @@ public class GestionDonneesActivity extends ActionBarActivity implements View.On
                     Intent gestionNotes = new Intent(this, GestionNotesActivity.class);
                     startActivity(gestionNotes);
                 }else{
-                    toast = Toast.makeText(getApplicationContext(), "Vous devez saisir des matières avant de pouvoir saisir des notes", Toast.LENGTH_SHORT);
+                    toast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.erreur_saisie_note_avant_matiere), Toast.LENGTH_SHORT);
                     toast.show();
                 }
                 break;

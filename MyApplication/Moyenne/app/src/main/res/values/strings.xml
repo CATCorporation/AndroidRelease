@@ -11,12 +11,31 @@
     <string name="gestion_donnees">Gestion des données</string>
     <string name="gestion_matieres">Gestion des matières</string>
     <string name="gestion_notes">Gestion des notes</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Réglages</string>
+    <string name="action_fr">Français</string>
+    <string name="action_en">Anglais</string>
+    <string name="erreur_saisir_note_avant_moyenne">Vous devez saisir des notes afin de pouvoir consulter vos moyennes</string>
+    <string name="construction">En construction</string>
+
+    <!-- Consulter les matières -->
+    <string name="matiere">Matiere</string>
+    <string name="coefficient">Coefficient</string>
+    <string name="moyenne">Moyenne</string>
+    <string name="moyenne_generale">Moyenne générale</string>
 
     <!-- Gestion des matières -->
     <string name="ajout_matiere">Ajouter une matière</string>
     <string name="ajout_coefficient">Ajouter un coefficient</string>
+    <string name="erreur_saisie_matiere">Vous devez saisir une matiere</string>
+    <string name="erreur_saisie_coefficient">Vous devez saisir un coefficient</string>
+    <string name="erreur_coefficient">Le coefficient doit être supérieur à 0</string>
 
+    <!-- Gestion des notes -->
+    <string name="erreur_saisie_note">Vous devez saisir une note</string>
+    <string name="erreur_note">Vous devez saisir une note entre 0 et 20</string>
+
+    <!-- Gestion des données -->
+    <string name="erreur_saisie_note_avant_matiere">Vous devez saisir des matières avant de pouvoir saisir des notes</string>
 
     <!-- Common -->
     <string name="ajouter">Ajouter</string>
@@ -41,6 +60,4 @@
     <string name="title_activity_gestion_notes">Gestion des notes</string>
     <string name="title_activity_gestion_matieres">Gestion des matières</string>
 
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

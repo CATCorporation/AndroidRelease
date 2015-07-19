@@ -40,7 +40,7 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
     private ArrayList<Matiere> matieres;
     private ArrayList<Note> notes;
 
-    private String properties[] = {"Matière", "Coefficient", "Moyenne"};
+    private String properties[] = {getResources().getString(R.string.matiere), getResources().getString(R.string.coefficient), getResources().getString(R.string.moyenne)};
 
 
     @Override
@@ -157,7 +157,7 @@ public class ConsulterActivity extends ActionBarActivity implements View.OnClick
         if(noteFound) {
             moyenneGenerale /= totalCoeff;
             moyenneGenerale = Float.valueOf(df.format(moyenneGenerale).replace(",", "."));
-            moyennes.put(new Matiere("Moyenne Générale"), new Note(moyenneGenerale));
+            moyennes.put(new Matiere(getResources().getString(R.string.moyenne_generale)), new Note(moyenneGenerale));
         }
 
         return moyennes;

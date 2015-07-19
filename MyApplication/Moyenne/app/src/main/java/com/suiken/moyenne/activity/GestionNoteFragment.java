@@ -328,11 +328,11 @@ public class GestionNoteFragment extends Fragment implements View.OnClickListene
     public boolean verifSaisie(){
         Toast toast;
         if(txtNote.getText().toString().equals("")){
-            toast = Toast.makeText(getActivity().getApplicationContext(), "Vous devez saisir une note", Toast.LENGTH_SHORT);
+            toast = Toast.makeText(getActivity().getApplicationContext(), getResources().getString(R.string.erreur_saisie_note), Toast.LENGTH_SHORT);
             toast.show();
             return false;
         }else if(Float.valueOf(txtNote.getText().toString()) < 0 || Float.valueOf(txtNote.getText().toString()) > 20){
-            toast = Toast.makeText(getActivity().getApplicationContext(), "Vous devez saisir une note entre 0 et 20", Toast.LENGTH_SHORT);
+            toast = Toast.makeText(getActivity().getApplicationContext(), getResources().getString(R.string.erreur_note), Toast.LENGTH_SHORT);
             toast.show();
             return false;
         }
